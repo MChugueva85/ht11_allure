@@ -21,7 +21,7 @@ public class WebSteps {
     }
 
     @Step()
-    public void clickOnRepositaryLink(String repo){
+    public void clickOnRepositoryLink(String repo){
         $(linkText(repo)).click();
     }
 

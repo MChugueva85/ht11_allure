@@ -12,25 +12,25 @@ import static org.openqa.selenium.By.linkText;
 
 public class GitHubIssueNameStepsTest {
 
-    static final String repository = "eroshenkoam/allure-example";
-    private static final int issue = 81;
+    static final String REPOSITORY = "eroshenkoam/allure-example";
+    private static final int ISSUE = 81;
 
     @Test
     public void testLambdaTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем главную страницу", () -> open("https://github.com"));
-        step("Ищем репозиторий" + repository, () -> {
+        step("Ищем репозиторий" + REPOSITORY, () -> {
             $("[data-target='qbsearch-input.inputButtonText']").click();
-            $("#query-builder-test").sendKeys(repository);
+            $("#query-builder-test").sendKeys(REPOSITORY);
             $("#query-builder-test").submit();
         });
 
-        step("Кликаем по ссылке репозитория " + repository, () -> $(linkText(repository)).click());
+        step("Кликаем по ссылке репозитория " + REPOSITORY, () -> $(linkText(REPOSITORY)).click());
 
         step("Открываем таб issues", () -> $("#issues-tab").click());
 
-        step("Проверяем название Issue с номером " + issue, () -> {
+        step("Проверяем название Issue с номером " + ISSUE, () -> {
             $("#issue_81_link").shouldHave(text("issue_to_test_allure_report"));
         });
 
@@ -42,8 +42,8 @@ public class GitHubIssueNameStepsTest {
         WebSteps steps = new WebSteps();
 
         steps.openMainPage();
-        steps.searchForRepository(repository);
-        steps.clickOnRepositaryLink(repository);
+        steps.searchForRepository(REPOSITORY);
+        steps.clickOnRepositoryLink(REPOSITORY);
         steps.openIssueTab();
         steps.shouldSeeIssueWithNumber();
     }
