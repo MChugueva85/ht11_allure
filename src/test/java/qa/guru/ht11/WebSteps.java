@@ -1,12 +1,14 @@
 package qa.guru.ht11;
 
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Tag;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
+@Tag("remote")
 public class WebSteps {
     @Step ("Открываем главную страницу")
     public void openMainPage(){
