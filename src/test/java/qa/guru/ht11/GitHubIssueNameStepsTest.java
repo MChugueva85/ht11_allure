@@ -2,6 +2,7 @@ package qa.guru.ht11;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 import static org.openqa.selenium.By.linkText;
-
+@Tag("remote")
 public class GitHubIssueNameStepsTest {
 
     static final String REPOSITORY = "eroshenkoam/allure-example";
