@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 import static org.openqa.selenium.By.linkText;
 @Tag("remote")
-public class GitHubIssueNameStepsTest {
+public class GitHubIssueNameStepsTest extends TestBase{
 
     static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int ISSUE = 81;
