@@ -15,7 +15,7 @@ public class GitHubIssueNameTest {
         public void testIssueSearch() {
             SelenideLogger.addListener("allure", new AllureSelenide());
 
-            open("https://github.com");
+            open("/");
 
             $("[data-target='qbsearch-input.inputButtonText']").click();
             $("#query-builder-test").sendKeys("eroshenkoam/allure-example");

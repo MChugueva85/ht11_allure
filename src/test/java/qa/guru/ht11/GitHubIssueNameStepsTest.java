@@ -20,7 +20,7 @@ public class GitHubIssueNameStepsTest {
     public void testLambdaTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Открываем главную страницу", () -> open("https://github.com"));
+        step("Открываем главную страницу", () -> open("/"));
         step("Ищем репозиторий" + REPOSITORY, () -> {
             $("[data-target='qbsearch-input.inputButtonText']").click();
             $("#query-builder-test").sendKeys(REPOSITORY);

@@ -1,7 +1,6 @@
 package qa.guru.ht11;
 
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Tag;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -12,7 +11,7 @@ import static org.openqa.selenium.By.linkText;
 public class WebSteps {
     @Step ("Открываем главную страницу")
     public void openMainPage(){
-        open("https://github.com");
+        open("/");
     }
 
     @Step(value = "Ищем репозиторий {repo}")
